@@ -1,0 +1,19 @@
+module.exports = {
+  apps: [
+    {
+      name: 'metro-next-stops-proxy',
+      script: './dist/index.js',
+      max_memory_restart: '128M',
+      env: {
+        PORT: 6030,
+        PRIM_API_TOKEN: 'YOUR_PRIM_API_TOKEN',
+        DEFAULT_STOP_KEY: 'metro6',
+        STOPS: "metro6\":{\"name\":\"Raspail\",\"lineName\":\"6\",\"lineRef\":\"STIF:Line::C01376:\",\"platforms\":[{\"monitoringRef\":\"STIF:StopPoint:Q:22155:\"},{\"monitoringRef\":\"STIF:StopPoint:Q:463292:\"}]}]}}",
+        MAX_DEPARTURES: 6,
+        MAX_DIRECTIONS: 4,
+        CACHE_TTL_MS: 30000,
+        REQUEST_TIMEOUT_MS: 15000,
+      },
+    },
+  ],
+};
