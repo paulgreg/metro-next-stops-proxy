@@ -1,6 +1,6 @@
 # Metro Next Stops Proxy
 
-Small Node.js proxy that calls the Ile-de-France Mobilites PRIM API and returns a simplified JSON payload for the ESP32 display.
+Small Node.js proxy that calls the [PRIM Ile de France Mobilité API](https://prim.iledefrance-mobilites.fr/) and returns a simplified JSON payload for an [ESP32 display](https://hackaday.io/project/206620-paris-transport-next-stop-display).
 
 The proxy handles:
 
@@ -15,6 +15,8 @@ The proxy handles:
 `prim.iledefrance-mobilites.fr` currently requires TLS 1.3, while ESP32 Arduino HTTPS clients commonly negotiate TLS 1.2 only.
 
 This proxy lets the ESP32 fetch from your own endpoint (for example behind nginx with TLS 1.2 support), while the server handles the TLS 1.3 call to PRIM.
+
+The ESP32 is agnostic about stations : the configuration is done on that proxy (no reflash is needed for adding/updating/removing stations).
 
 ## Requirements
 
